@@ -26,6 +26,7 @@ nav {
     background-color: var(--dark-blue);
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
 footer {
@@ -75,4 +76,63 @@ button a {
 
 button a:active {
     color: var(--theme);
+}
+
+
+
+
+
+
+
+.nav_items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a,
+nav a:visited {
+    color: var(--theme);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#bell-icon {
+    padding-top: 10px;
+    height: 50px;
+    width: 40px;
+}
+
+nav a:active {
+    color: #fff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    color: val(--theme);
+}
+
+main {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* max-width: 400px; */
 }
