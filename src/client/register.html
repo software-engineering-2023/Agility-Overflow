@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Registration</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/authentication.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="../assets/logo.png" alt="logo" className="logo" height="125px" width="125px"></img>
+        </div>
+        <div>
+            <a href="login.html"><button>Log in</button></a>
+        </div>
+    </nav>
+    <div class="login-container">
+		<h1>Register for a New Account</h1>
+		<form>
+            <label for="name">Name</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" placeholder="Enter your username" required>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <label for="bank-account-number">Bank Account Number (if exists)</label>
+			<input type="number" id="bank-account-number" name="bank-account-number" placeholder="Enter your bank account number if you have one">
+			<button type="submit">Register</button>
+		</form>
+	</div>
+    <footer>
+        <p className="cp-text" >© Copyright 2023 Prosperity Bank. All rights reserved.</p>
+        <a href="report.html" target="_blank">
+            <p>Report an issue</p>
+        </a>
+    </footer>
+</body>
+</html>
