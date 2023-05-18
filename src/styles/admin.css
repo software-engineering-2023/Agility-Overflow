@@ -68,11 +68,20 @@ textarea {
     width: 300px;
 }
 
-form {
-    width: 30%;
+form,
+article {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
+}
+
+form {
+    width: 30%;
+}
+
+article {
+    width: 80%;
+    margin-bottom: 30px;
 }
 
 form input[type="text"],
@@ -98,7 +107,7 @@ textarea {
     max-height: 150px;
 }
 
-form button[type="submit"] {
+form button {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
@@ -147,4 +156,24 @@ form button[type="submit"] {
 
 .search .remove {
     background-color: var(--danger);
+}
+
+.report_identification {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reply {
+    border: none;
+    width: 100%;
+    display: flex;
+}
+
+.reply textarea {
+    max-width: 80%;
+    min-width: 70%;
+}
+
+.reply button {
+    width: 15%;
 }
