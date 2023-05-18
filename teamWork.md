@@ -8,6 +8,7 @@
    - view a specific card's transactions
    - view a specific card's points and redeem for cashback
    - report a specific card's theft/loss/damage and apply for replacement
+   - EXTRA: send question to a banker (customer support)
 
 ## Ibrahim
 
@@ -20,8 +21,10 @@
 
 1. Client bills page:
    - choose to pay card bills (partially or fully), gas, water, electricity, telephone
+   - EXTRA: send question to a banker (customer support)
 2. Transfser page:
    - choose internal/domestic/international, just a form and submit button (maybe choose from which bank account and show the corresponding bank account's balance available and refuse the submit if it is exceeding available amount)
+   - EXTRA: send question to a banker (customer support)
 
 ## Wael
 
@@ -29,10 +32,12 @@
    - view all my bank accounts
    - open/close bank account
    - view specific bank account transactions
+   - EXTRA: send question to a banker (customer support)
 2. Client loan page:
    - view all my applied loans (show status: pending/rejected/accepted, could just be an icon)
    - view each loan details (type, amount, status, ...)
    - apply for loan (personal or car) or delete an existing pending application
+   - EXTRA: send question to a banker (customer support)
 
 ## John
 
