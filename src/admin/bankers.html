@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Bankers Manager</title>
     <link rel="icon" href="../assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../styles/general.css">
     <link rel="stylesheet" type="text/css" href="../styles/admin.css">
@@ -15,26 +15,23 @@
             <h1>Prosperity Bank</h1>
             <hr />
 			<ul>
-				<li class="active"><a href="">Dashboard</a></li>
+				<li><a href="dashboard.html">Dashboard</a></li>
 				<li><a href="clients.html">Clients</a></li>
-				<li><a href="bankers.html">Bankers</a></li>
+				<li class="active"><a href="bankers.html">Bankers</a></li>
 				<li><a href="reported-issues.html">Reported Issues</a></li>
                 <li><a href="login.html">Log out</a></li>
 			</ul>
 		</div>
 		<main>
-			<h1>Welcome to the Admin Panel</h1>
-			<p>Bank Accounts opened previous month: 9182</p>
-			<p>Bank Accounts closed previous month: 23</p>
-			<p>Credit Cards approved previous month: 8729</p>
-			<p>Credit Cards declined previous month: 87</p>
-			<p>Loans approved previous month: 342</p>
-			<p>Loans declined previous month: 12</p>
+			<h1>Manage the Bank's Employees</h1>
+			<p>Total number of bank's employees: 1789</p>
             <br />
-            <form action="dashboard.html">
-                <label for="announcement">Send Announcement to Users</label>
-                <textarea id="announcement" placeholder="Type your announcement"></textarea>
-                <button type="submit">Send</button>
+            <form action="bankers-example.html" class="search">
+                <label for="search">Search for a Banker</label>
+                <div>
+                <input type="text" id="announcement" placeholder="Banker SSN or username" required></input>
+                <button type="submit">Search</button>
+            </div>
             </form>
         </main>
 	</div>
