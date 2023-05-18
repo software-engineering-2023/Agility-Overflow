@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Register</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/admin.css">
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+            <h1>Prosperity Bank</h1>
+            <h2>Adminstration Portal</h2>
+            <hr />
+            <a href="login.html">Log in</a>
+		</div>
+		<main>
+            <div class="login-container">
+                <h1>Register for a New Account</h1>
+                <form action="register.html">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <label for="ownerID">Owner ID</label>
+                    <input type="number" id="ownerID" name="ownerID" placeholder="Enter your owner ID" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </main>
+	</div>
+</body>
+</html>
