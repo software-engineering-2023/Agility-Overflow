@@ -177,3 +177,62 @@ form button {
 .reply button {
     width: 15%;
 }
+
+
+
+.login-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.login-container form {
+    width: 100%;
+    border: none;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--theme);
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--theme);
+}
+
+.login-container form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login-container button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--theme);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: var(--theme);
+    text-decoration: none;
+}
