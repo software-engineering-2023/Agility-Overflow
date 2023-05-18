@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+}
+.sidebar {
+    background-color: var(--theme);
+    color: #fdfdfc;
+    width: 300px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #fdfdfc;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.sidebar a:hover {
+    font-weight: 800;
+}
+
+main {
+    padding: 20px 50px;
+    height: 100vh;
+    width: 100%;
+    background-color: #fcfdfc;
+}
+
+.sidebar h1 {
+    color: var(--orange);
+}
+
+hr {
+    border: 2px solid var(--orange);
+    margin-bottom: 40px;
+}
+
+.active a {
+    color: var(--light-blue);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--theme);
+}
+
+textarea {
+    display: block;
+    height: 80px;
+    width: 300px;
+}
+
+form {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="email"],
+textarea {
+    display: block;
+    min-width: 100%;
+    min-height: 50px;
+    max-width: 100%;
+    max-height: 150px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+}
+
+form button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--theme);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
