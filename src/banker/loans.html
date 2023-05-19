@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loans Manager</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/banker.css">
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+            <img src="../assets/logo.png" alt="logo" className="logo" height="250px" width="250px"></img>
+            <hr />
+			<ul>
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="bank-accounts.html">Bank Accounts</a></li>
+				<li><a href="credit-cards.html">Credit Cards</a></li>
+				<li class="active"><a href="loans.html">Loans</a></li>
+				<li><a href="customer-support.html">Customer Support</a></li>
+                <li><a href="login.html">Log out</a></li>
+			</ul>
+		</div>
+		<main>
+			<h1>Loans Manager</h1>
+            <form action="loans-example.html" class="search">
+                <label for="search" id="bigger-label">Search for a Loan</label>
+                <div>
+                    <input type="text" id="search" placeholder="Loan ID" required></input>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <div style="width:50%; padding-top: 20px;"><hr /></div>
+            <h3>Unhandled Loan Applications</h3>
+            <article class="application">
+                <div>
+                    <p>Bank Account Number: 6495407068</p>
+                    <p>Loan Type: Car</p>
+                    <p>Amount: 30,000EGP</p>
+                    <p>Due Date: 09-05-2024</p>
+                    <p>Occupation: Paralegal</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <article class="application">
+                <div>
+                    <p>Bank Account Number: 0771966504</p>
+                    <p>Loan Type: Personal</p>
+                    <p>Amount: 10,000EGP</p>
+                    <p>Due Date: 01-02-2025</p>
+                    <p>Occupation: Computer Systems Analyst</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <article class="application">
+                <div>
+                    <p>Bank Account Number: 2392349142</p>
+                    <p>Loan Type: Personal</p>
+                    <p>Amount: 53,250EGP</p>
+                    <p>Due Date: 07-02-2027</p>
+                    <p>Occupation: Senior Developer</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <article class="application">
+                <div>
+                    <p>Bank Account Number: 7641587704</p>
+                    <p>Loan Type: Car</p>
+                    <p>Amount: 20,800EGP</p>
+                    <p>Due Date: 24-08-2023</p>
+                    <p>Occupation: Teacher</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <script>
+                const approveButtons = document.querySelectorAll('.approve');
+                const declineButtons = document.querySelectorAll('.decline');
+                approveButtons.forEach(button => {
+                  button.addEventListener('click', () => {
+                    button.closest('.application').remove();
+                  });
+                });
+                declineButtons.forEach(button => {
+                  button.addEventListener('click', () => {
+                    button.closest('.application').remove();
+                  });
+                });
+            </script>
+        </main>
+	</div>
+</body>
+</html>

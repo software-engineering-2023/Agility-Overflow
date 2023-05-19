@@ -87,6 +87,8 @@ form input[type="number"],
 form input[type="email"],
 form input[type="tel"],
 form input[type="month"],
+form input[type="date"],
+select,
 textarea {
     display: block;
     padding: 5px;
@@ -95,6 +97,10 @@ textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+select {
+    width: 85%;
 }
 
 form input:disabled {
