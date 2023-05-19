@@ -41,9 +41,9 @@
 
 ## John
 
-1. Logo
-2. Walkthrough Video
-3. Template & style
-4. Authentication pages
-5. Dashboard pages
-6. Client report technical issue (in template)
+- [x] Logo
+- [ ] Walkthrough Video
+- [x] Template & style
+- [x] Authentication pages
+- [x] Dashboard pages
+- [x] Client report technical issue (in template)
