@@ -74,14 +74,10 @@ article {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-}
-
-form {
-    width: 30%;
+    width: 50%;
 }
 
 article {
-    width: 80%;
     margin-bottom: 30px;
 }
 
@@ -281,10 +277,34 @@ input[type=range]::-moz-range-thumb {
     width: 50%;
 }
 
+.incoming {
+    color: #139213;
+}
+
 .outgoing {
     color: #951616;
 }
 
-.incoming {
-    color: #139213;
+.decline {
+    background-color: #6a0202;
+}
+
+.approve-or-decline {
+    border: none;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.application {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.approve-or-decline button {
+    width: 100%;
+    height: 35%;
 }

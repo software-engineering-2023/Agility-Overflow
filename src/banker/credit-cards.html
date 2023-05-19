@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Cards Manager</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/banker.css">
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+            <img src="../assets/logo.png" alt="logo" className="logo" height="250px" width="250px"></img>
+            <hr />
+			<ul>
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="bank-accounts.html">Bank Accounts</a></li>
+				<li class="active"><a href="credit-cards.html">Credit Cards</a></li>
+				<li><a href="loans.html">Loans</a></li>
+				<li><a href="customer-support.html">Customer Support</a></li>
+                <li><a href="login.html">Log out</a></li>
+			</ul>
+		</div>
+		<main>
+			<h1>Credit Cards Manager</h1>
+            <!-- search for credit card with number -->
+            <form action="credit-cards-example.html" class="search">
+                <label for="search" id="bigger-label">Search for a Credit Card</label>
+                <div>
+                    <input type="text" id="search" placeholder="Credit Card Number" required></input>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <div style="width:50%; padding-top: 20px;"><hr /></div>
+            <h3>Unhandled Credit Card Applications</h3>
+            <!-- view credit card applications -->
+            <article class="application">
+                <div>
+                    <p>Client Name: Oliver Doe</p>
+                    <p>Client Email: oblakeman0@narod.ru</p>
+                    <p>Client National ID: 129898334</p>
+                    <p>Bank Account Number: 6495407068</p>
+                    <p>Occupation: Paralegal</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <article class="application">
+                <div>
+                    <p>Client Name: Jim Smith</p>
+                    <p>Client Email: jmacon1@diigo.com</p>
+                    <p>Client National ID: 459017977</p>
+                    <p>Bank Account Number: 0771966504</p>
+                    <p>Occupation: Computer Systems Analyst</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <article class="application">
+                <div>
+                    <p>Client Name: Vale Mayor</p>
+                    <p>Client Email: varonow2@symantec.com</p>
+                    <p>Client National ID: 151299491</p>
+                    <p>Bank Account Number: 2392349142</p>
+                    <p>Occupation: Senior Developer</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <article class="application">
+                <div>
+                    <p>Client Name: Griswold David</p>
+                    <p>Client Email: gmairs3@networkadvertising.org</p>
+                    <p>Client National ID: 271828255</p>
+                    <p>Bank Account Number: 7641587704</p>
+                    <p>Occupation: Teacher</p>
+                </div>
+                <form class="approve-or-decline">
+                    <button type="submit" class="approve">Approve</button>
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </article>
+            <script>
+                const approveButtons = document.querySelectorAll('.approve');
+                const declineButtons = document.querySelectorAll('.decline');
+                approveButtons.forEach(button => {
+                  button.addEventListener('click', () => {
+                    button.closest('.application').remove();
+                  });
+                });
+                declineButtons.forEach(button => {
+                  button.addEventListener('click', () => {
+                    button.closest('.application').remove();
+                  });
+                });
+            </script>
+        </main>
+	</div>
+</body>
+</html>
