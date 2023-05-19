@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker Dashboard</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/banker.css">
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+            <img src="../assets/logo.png" alt="logo" className="logo" height="250px" width="250px"></img>
+            <hr />
+			<ul>
+				<li class="active"><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="bank-accounts.html">Bank Accounts</a></li>
+				<li><a href="credit-cards.html">Credit Cards</a></li>
+				<li><a href="loans.html">Loans</a></li>
+				<li><a href="customer-support.html">Customer Support</a></li>
+                <li><a href="login.html">Log out</a></li>
+			</ul>
+		</div>
+		<main>
+			<h1>Welcome to the Banker Panel</h1>
+            <p>Total clients in the bank: 3248972</p>
+            <p>Currently online clients: 241</p>
+            <label for="transfer-limit">Maximum Transfers per Day: <span id="slider-value">5</span></label>
+            <input type="range" id="transfer-limit" name="transfer-limit" min="0" max="10" value="5" oninput="updateValue(this.value)">
+            <script>
+            function updateValue(val) {
+              document.getElementById("slider-value").innerHTML = val;
+            }
+            </script>
+            <br />
+        </main>
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Accounts Manager</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/banker.css">
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+            <img src="../assets/logo.png" alt="logo" className="logo" height="250px" width="250px"></img>
+            <hr />
+			<ul>
+				<li><a href="dashboard.html">Dashboard</a></li>
+				<li class="active"><a href="bank-accounts.html">Bank Accounts</a></li>
+				<li><a href="credit-cards.html">Credit Cards</a></li>
+				<li><a href="loans.html">Loans</a></li>
+				<li><a href="customer-support.html">Customer Support</a></li>
+                <li><a href="login.html">Log out</a></li>
+			</ul>
+		</div>
+		<main>
+			<h1>Bank Accounts Manager</h1>
+            <!-- search for bank account with number -->
+            <form action="bank-accounts-example.html" class="search">
+                <label for="search" id="bigger-label">Search for a Bank Account</label>
+                <div>
+                    <input type="text" id="search" placeholder="Bank Account Number" required></input>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </main>
+	</div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--dark-blue);
+    color: #fdfdfc;
+    width: 300px;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #fdfdfc;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.sidebar a:hover {
+    font-weight: 800;
+}
+
+main {
+    margin-left: 300px;
+    padding: 20px 50px;
+    width: 100%;
+    background-color: #fcfdfc;
+}
+
+.sidebar h1 {
+    color: var(--orange);
+}
+
+hr {
+    border: 2px solid var(--yellow);
+    margin-bottom: 40px;
+    width: 80%;
+}
+
+.active a {
+    color: var(--theme);
+    font-weight: 800;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--theme);
+}
+
+textarea {
+    display: block;
+    height: 80px;
+    width: 300px;
+}
+
+form,
+article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form {
+    width: 30%;
+}
+
+article {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="email"],
+form input[type="tel"],
+textarea {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+    min-width: 100%;
+    min-height: 50px;
+    max-width: 100%;
+    max-height: 150px;
+}
+
+form button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--theme);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.search button {
+    display: inline;
+    width: 25%;
+}
+
+.search input {
+    display: inline;
+    min-width: 70%;
+    max-width: 70%;
+}
+
+.search label {
+    width: 30%;
+    margin-left: 5%;
+}
+
+.search div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.search .remove {
+    background-color: var(--danger);
+}
+
+.report_identification {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reply {
+    border: none;
+    width: 100%;
+    display: flex;
+}
+
+.reply textarea {
+    max-width: 80%;
+    min-width: 70%;
+}
+
+.reply button {
+    width: 15%;
+}
+
+
+
+.login-container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.login-container form {
+    width: 100%;
+    border: none;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--theme);
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--theme);
+}
+
+.login-container form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login-container button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--theme);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: var(--theme);
+    text-decoration: none;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 30%;
+    height: 10px;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    outline: none;
+    margin: 10px 0;
+    margin-left: 30px;
+}
+
+input[type=range]:hover {
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search  .transaction {
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-between;
+}
+
+#bigger-label {
+    width: 50%;
+}
+
+.outgoing {
+    color: #951616;
+}
+
+.incoming {
+    color: #139213;
+}
