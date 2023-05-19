@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker Register</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/banker.css">
+</head>
+<body>
+    <div class="container">
+		<div class="sidebar">
+            <img src="../assets/logo.png" alt="logo" className="logo" height="250px" width="250px"></img>
+            <hr />
+			<ul>
+                <li><a href="login.html">Log in</a></li>
+			</ul>
+		</div>
+		<main>
+            <div class="login-container">
+                <h1>Register for a New Account</h1>
+                <form action="register.html">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    <label for="SSN">Social Security Number</label>
+                    <input type="number" id="SSN" name="SSN" placeholder="Enter your SSN" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </main>
+	</div>
+</body>
+</html>
