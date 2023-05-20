@@ -139,6 +139,22 @@ textarea {
     height: 80px;
 }
 
+form {
+    width: 30%;
+    margin: 10px 50px 50px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.forms {
+    display: flex;
+}
+
+form h3 {
+    text-align: center;
+}
+
 form button[type="submit"] {
     display: block;
     margin: 0 auto;
@@ -162,4 +178,27 @@ form button[type="submit"] {
 
 .active {
     color: #fff;
+}
+
+
+
+hr {
+    border: 2px solid var(--yellow);
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.transaction {
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-around;
+}
+
+.incoming {
+    color: #139213;
+}
+
+.outgoing {
+    color: #951616;
 }
