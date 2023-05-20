@@ -21,7 +21,7 @@
 1. Client bills page:
    - choose to pay card bills (partially or fully), gas, water, electricity, telephone
 2. Transfser page:
-   - choose internal/domestic/international, just a form and submit button (maybe choose from which bank account and show the corresponding bank account's balance available and refuse the submit if it is exceeding available amount)
+   - choose internal/domestic/international, just a form and submit button (maybe choose from which bank account and show the corresponding bank account's balance available)
 
 ## Wael
 
@@ -42,3 +42,5 @@
 - [x] Authentication pages
 - [x] Dashboard pages
 - [x] Client report technical issue (in template)
+- [x] Admin requirements
+- [x] Banker requirements
