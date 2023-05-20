@@ -236,3 +236,7 @@ form button {
     color: var(--theme);
     text-decoration: none;
 }
+
+form input:disabled {
+    background-color: #ddd;
+}
