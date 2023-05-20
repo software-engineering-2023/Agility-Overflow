@@ -159,3 +159,7 @@ form button[type="submit"] {
     color: var(--theme);
     text-decoration: none;
 }
+
+.active {
+    color: #fff;
+}

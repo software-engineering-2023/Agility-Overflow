@@ -24,8 +24,14 @@
 			<input type="email" id="email" name="email" placeholder="Enter your email" required>
 			<label for="message">Message</label>
             <textarea id="'message" placeholder="Tell us your problem" required></textarea>
-			<button type="submit">Submit</button>
+			<button id="submit-btn" type="submit">Submit</button>
 		</form>
+        <script>
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.addEventListener('click', () => {
+              window.close();
+            });
+          </script>
 	</div>
     <footer>
         <p className="cp-text" >© Copyright 2023 Prosperity Bank. All rights reserved.</p>
