@@ -1,60 +1,76 @@
 /* Components */
-button {
-    background-color: var(--yellow);
+button {background-color: var(--yellow);
     color: var(theme);
     font-size: 18px;
     border-color: transparent;
-    padding: 10px 10px;
+    padding: 10px 40px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
 }
 
 a {
-    text-decoration: none;
+text-decoration: none;
 }
 
 button:hover {
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
 button:active {
-    transform: scale(1);
+transform: scale(1);
 }
 
 button a {
-    text-decoration: none;
+text-decoration: none;
 }
 
 button a:active {
-    color: var(--theme);
+color: var(--theme);
 }
 
-
-
-
-
-
+/* re-desing the select menu with id billsPayment */
+#billsPayment {
+width: 95%;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 20px;
+margin-top: 20px;
+margin-left: 10px;
+font-size: 18px;
+color: var(--theme);
+}
 
 .nav_items {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
 }
 
 nav li {
-    margin: 0 10px;
+margin: 0 10px;
 }
 
 nav a {
+color: var(--theme);
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+padding: 10px;
+}
+
+nav a,
+nav a:visited {
     color: var(--theme);
     text-decoration: none;
     font-size: 18px;
@@ -73,7 +89,7 @@ nav a {
 }
 
 #bell-icon:active {
-    transform: scale(1.0);
+    transform: scale(1);
 }
 
 nav a:active {
@@ -96,8 +112,6 @@ main {
     /* max-width: 400px; */
     width: 80%;
 }
-
-
 
 .login-container {
     margin: 50px auto;
@@ -138,7 +152,7 @@ textarea {
     height: 80px;
 }
 
-.change {
+form {
     width: 95%;
     margin: 10px 50px 50px 10px;
     border-radius: 5px;
@@ -175,6 +189,10 @@ form button[type="submit"] {
     text-decoration: none;
 }
 
+.active {
+    color: #fff;
+}
+
 hr {
     border: 2px solid var(--yellow);
     margin-bottom: 40px;
@@ -203,7 +221,7 @@ hr {
 button[type="submit"] .cancel {
     background-color: var(--danger);
 }
-    
+
 .active {
     color: #fff;
 }
