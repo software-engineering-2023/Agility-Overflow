@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        TODO: write your title here
+        Bank Accounts
     </title>
     <link rel="icon" href="../assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../styles/general.css">
     <link rel="stylesheet" type="text/css" href="../styles/client.css">
 </head>
+
 <body>
     <nav>
         <div>
-            <a href="dashboard.html"><img src="../assets/logo.png" alt="logo" className="logo" height="125px" width="125px"></img></a>
+            <a href="dashboard.html"><img src="../assets/logo.png" alt="logo" className="logo" height="125px"
+                    width="125px"></img></a>
         </div>
         <div class="nav_items">
             <ul>
-                <!-- TODO: write class="active" in the <a> element corresponding to your page -->
                 <li><a href="notifications.html"><img id="bell-icon" src="../assets/bell.png"></a></li>
-                <li><a href="bank-accounts.html">Bank Accounts</a></li>
+                <li><a class="active" href="bank-accounts.html">Bank Accounts</a></li>
                 <li><a href="loans.html">Loans</a></li>
                 <li><a href="bills.html">Bills</a></li>
                 <li><a href="transfer.html">Transfer</a></li>
@@ -32,19 +34,54 @@
         </div>
     </nav>
     <main>
-        <ul>
-            <li>100&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="account-100.html"><button>View Bank Account</button></a></li>
-            <li>101&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="account-101.html"><button>View Bank Account</button></a></li>
-        </ul>
-        <button> Add new Bank Account</button>
-        <!-- TODO: Add new Bank Account -->
-          
+        <h1>My Bank Accounts</h1>
+        <div class="container">
+            <div id="input-container">
+                <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
+                    value="Bank Account Number 3210987654" disabled>
+                <a href="account-100.html"><button class="use-button">View</button></a>
+            </div>
+            <br>
+            <div id="input-container">
+                <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
+                    value="Bank Account Number 8754632190" disabled>
+                <a href="account-101.html"><button class="use-button">View</button></a>
+            </div>
+            <br>
+            <div id="card-details">
+                <h3>Add Bank Account</h3>
+                <form onsubmit="move();return false;" id="card-form">
+                    <label for="type">Currency</label>
+                    <select id="type">
+                        <option value="value1">EGP - Egyptian Pound</option>
+                        <option value="value2">EUR - Euro</option>
+                        <option value="value3">USD - United States Dollar</option>
+                        <option value="value4">GBP - Great Britain Pound</option>
+                        <option value="value5">SR - Saudi Riyal</option>
+                        <option value="value6">CHF - Switzerland Franc</option>
+                        <option value="value7">JPY - Japan Yen</option>
+                    </select>
+
+                    <label>
+                        <input type="checkbox" name="example_checkbox" value="1" required>
+                        I agree to the terms and conditions.
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <button id="apply-new" class="hidden" onclick="launch_toast()">
+                <p>Apply for a New Card</p>
+            </button>
+
+        </div>
     </main>
     <footer>
-        <p className="cp-text" >© Copyright 2023 Prosperity Bank. All rights reserved.</p>
+        <p className="cp-text">© Copyright 2023 Prosperity Bank. All rights reserved.</p>
         <a href="report.html" target="_blank">
             <p>Report an issue</p>
         </a>
     </footer>
 </body>
+
 </html>

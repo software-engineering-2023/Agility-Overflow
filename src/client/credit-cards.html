@@ -11,7 +11,6 @@
   <link rel="icon" href="../assets/logo.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="../styles/general.css">
   <link rel="stylesheet" type="text/css" href="../styles/client.css">
-  <link rel="stylesheet" type="text/css" href="../styles/client-credit-cards.css">
 </head>
 
 <body>
@@ -101,22 +100,14 @@
           <button class="use-button" onclick="move()">View</button>
         </div>
         <br>
-        <div>
-          <input type="radio" id="add-new" name="card-option">
-          <label for="add-new">Add Existing Card</label><br><br>
-        </div>
-        <div>
-          <input type="radio" id="no-card" name="card-option">
-          <label for="no-card">Apply for a New Card</label><br><br>
-        </div>
         <div id="toast">
           <div id="img">
             <div class="ro" style='font-size:30px; '>&#9989;</div>
           </div>
           <div id="desc">Your application has been received</div>
         </div>
-      <div id="card-details" class="hidden">
-        <h3>Add Card Details</h3>
+      <div id="card-details">
+        <h3>Add an Existing Credit Card</h3>
         <form onsubmit="move();return false;" id="card-form">
           <label for="card-number">Card Number:</label>
           <input type="text" id="card-number" required>
@@ -127,11 +118,11 @@
           <label for="expiry-date">Expiry Date:</label>
           <input style="margin-right:20px" type="text" id="expiry-date" required>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Add</button>
         </form>
       </div>
 
-      <button id="apply-new" class="hidden" onclick="launch_toast()">
+      <button id="apply-new" onclick="launch_toast()">
         <p>Apply for a New Card</p>
       </button>
 
