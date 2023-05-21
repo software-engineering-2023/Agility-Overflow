@@ -29,7 +29,6 @@ button a:active {
 color: var(--theme);
 }
 
-/* re-desing the select menu with id billsPayment */
 #billsPayment {
 width: 95%;
 padding: 10px;

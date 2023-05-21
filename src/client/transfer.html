@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer Page</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../styles/general.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/client.css" />
+    <script src="../scripts/transfer.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <a href="dashboard.html"
+          ><img
+            src="../assets/logo.png"
+            alt="logo"
+            class="logo"
+            height="125px"
+            width="125px"
+        /></a>
+      </div>
+      <div class="nav_items">
+        <ul>
+          <li>
+            <a href="notifications.html"
+              ><img id="bell-icon" src="../assets/bell.png"
+            /></a>
+          </li>
+          <li><a href="bank-accounts.html">Bank Accounts</a></li>
+          <li><a href="loans.html">Loans</a></li>
+          <li><a href="bills.html">Bills</a></li>
+          <li class="active"><a href="transfer.html">Transfer</a></li>
+          <li><a href="credit-cards.html">Credit Cards</a></li>
+        </ul>
+        <div>
+          <a href="login.html"><button>Log out</button></a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <h1>Transfer Money</h1>
+
+      <h2>Choose Transfer Type:</h2>
+
+      <form id="transferForm">
+        <label for="transferType">Transfer Type:</label>
+        <select
+          id="transferType"
+          name="transferType"
+          onchange="showTransferFields()"
+        >
+          <option value="internal">Internal</option>
+          <option value="domestic">Domestic</option>
+          <option value="international">International</option>
+        </select>
+
+        <label for="bankAccount">Bank Account:</label>
+        <select id="bankAccount" name="bankAccount">
+          <option value="account1">Account 1</option>
+          <option value="account2">Account 2</option>
+          <option value="account3">Account 3</option>
+        </select>
+
+        <div id="internalFields" style="display: block">
+          <label for="availableBalance">Available Balance:</label>
+          <input
+            type="text"
+            id="availableBalance"
+            name="availableBalance"
+            value="$10000000"
+            readonly
+            required
+          />
+
+          <label for="transferTo">Transfer To:</label>
+          <input
+            type="text"
+            id="transferTo"
+            name="transferTo"
+            placeholder="Enter account number"
+            required
+          />
+
+          <label for="transferAmount">Transfer Amount:</label>
+          <input
+            type="number"
+            id="transferAmount"
+            name="transferAmount"
+            required
+            min="1"
+            max="10000000"
+          />
+        </div>
+
+        <div id="domesticFields" style="display: none">
+          <label for="availableBalance">Available Balance:</label>
+          <input
+            type="text"
+            id="availableBalance"
+            name="availableBalance"
+            value="$10000000"
+            readonly
+            required
+          />
+
+          <label for="bankName">Bank Name:</label>
+          <input
+            type="text"
+            id="bankName"
+            name="bankName"
+            placeholder="Enter bank name"
+            required
+          />
+
+          <label for="branchName">Branch Name:</label>
+          <input
+            type="text"
+            id="branchName"
+            name="branchName"
+            placeholder="Enter branch name"
+            required
+          />
+
+          <label for="transferTo">Transfer To:</label>
+          <input
+            type="text"
+            id="transferTo"
+            name="transferTo"
+            placeholder="Enter account number"
+            required
+          />
+
+          <label for="transferAmount">Transfer Amount:</label>
+          <input
+            type="number"
+            id="transferAmount"
+            name="transferAmount"
+            min="1"
+            max="10000000"
+          />
+        </div>
+
+        <div id="internationalFields" style="display: none">
+          <label for="availableBalance">Available Balance:</label>
+          <input
+            type="text"
+            id="availableBalance"
+            name="availableBalance"
+            value="$10000000"
+            readonly
+            required
+          />
+          <label for="country">Country:</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="Enter country name"
+            required
+          />
+
+          <label for="city">City:</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter city name"
+            required
+          />
+
+          <label for="bankName">Bank Name:</label>
+          <input
+            type="text"
+            id="bankName"
+            name="bankName"
+            placeholder="Enter bank name"
+            required
+          />
+
+          <label for="branchName">Branch Name:</label>
+          <input
+            type="text"
+            id="branchName"
+            name="branchName"
+            placeholder="Enter branch name"
+            required
+          />
+
+          <label for="swiftCode">SWIFT/BIC Code:</label>
+          <input
+            type="text"
+            id="swiftCode"
+            name="swiftCode"
+            placeholder="Enter SWIFT/BIC code"
+            required
+          />
+
+          <label for="transferTo">Transfer To:</label>
+          <input
+            type="text"
+            id="transferTo"
+            name="transferTo"
+            placeholder="Enter account number"
+            required
+          />
+
+          <label for="transferAmount">Transfer Amount:</label>
+          <input
+            type="number"
+            id="transferAmount"
+            name="transferAmount"
+            required
+            min="1"
+            max="10000000"
+          />
+        </div>
+
+        <button type="submit" id="confirmationButton">Confirm</button>
+      </form>
+    </main>
+    <footer>
+      <p class="cp-text">© 2023 Prosperity Bank. All rights reserved.</p>
+      <a href="report.html" target="_blank">
+        <p>Report an issue</p>
+      </a>
+    </footer>
+  </body>
+</html>
