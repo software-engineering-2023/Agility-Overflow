@@ -68,8 +68,8 @@ font-weight: bold;
 padding: 10px;
 }
 
-nav a,
-nav a:visited {
+nav a
+{
     color: var(--theme);
     text-decoration: none;
     font-size: 18px;
@@ -137,14 +137,24 @@ form input[type="text"],
 form input[type="password"],
 form input[type="number"],
 form input[type="email"],
+form input[type="tel"],
+select,
 textarea {
     display: block;
-    width: 100%;
     padding: 5px;
+    width: 100%;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+    min-width: 100%;
+    min-height: 50px;
+    max-width: 100%;
+    max-height: 150px;
 }
 
 textarea {
@@ -189,10 +199,6 @@ form button[type="submit"] {
 .forgot-password a {
     color: var(--theme);
     text-decoration: none;
-}
-
-.active {
-    color: #fff;
 }
 
 hr {
