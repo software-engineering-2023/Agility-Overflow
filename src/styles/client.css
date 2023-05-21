@@ -156,8 +156,11 @@ form {
     width: 95%;
     margin: 10px 50px 50px 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
     padding: 10px;
+}
+
+.change {
+    border: 1px solid #ccc;
 }
 
 .forms {
