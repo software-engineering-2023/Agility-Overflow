@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Credit Cards
+  </title>
+  <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../styles/general.css">
+  <link rel="stylesheet" type="text/css" href="../styles/client.css">
+  <link rel="stylesheet" type="text/css" href="../styles/client-credit-cards.css">
+</head>
+
+<body>
+  <nav>
+    <div>
+      <a href="dashboard.html"><img src="../assets/logo.png" alt="logo" className="logo" height="125px"
+          width="125px"></img></a>
+    </div>
+    <div class="nav_items">
+      <ul>
+        <li><a href="notifications.html"><img id="bell-icon" src="../assets/bell.png"></a></li>
+        <li><a href="bank-accounts.html">Bank Accounts</a></li>
+        <li><a href="loans.html">Loans</a></li>
+        <li><a href="bills.html">Bills</a></li>
+        <li><a href="transfer.html">Transfer</a></li>
+        <li><a class="active" href="credit-cards.html">Credit Cards</a></li>
+      </ul>
+      <div>
+        <a href="login.html"><button>Log out</button></a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <script>
+      function launch_toast() {
+        var x = document.getElementById("toast")
+        x.className = "show";
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+
+        var addNewOption = document.getElementById('add-new');
+        var noCardOption = document.getElementById('no-card');
+        var cardDetails = document.getElementById('card-details');
+        var applyNew = document.getElementById('apply-new');
+        var cardForm = document.getElementById('card-form');
+
+        addNewOption.addEventListener('change', function () {
+          cardDetails.classList.remove('hidden');
+          applyNew.classList.add('hidden');
+        });
+
+        noCardOption.addEventListener('change', function () {
+          cardDetails.classList.add('hidden');
+          applyNew.classList.remove('hidden');
+        });
+
+        cardForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          // Retrieve card details
+          var cardNumber = document.getElementById('card-number').value;
+          var cardHolder = document.getElementById('card-holder').value;
+          var expiryDate = document.getElementById('expiry-date').value;
+
+          // Perform any required actions with the card details (e.g., send to server)
+          console.log('Card Number:', cardNumber);
+          console.log('Card Holder:', cardHolder);
+          console.log('Expiry Date:', expiryDate);
+
+          // Reset the form
+          cardForm.reset();
+        });
+      });
+      function clearInput() {
+        var inputContainer = document.getElementById("input-container");
+        inputContainer.remove();
+      }
+
+
+      function move() {
+        window.location.href = "card-example.html"
+      };
+
+    </script>
+    <h1>My Credit Cards</h1>
+    <div class="container">
+        <div id="input-container">
+          <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
+            value="**** **** **** 5371" disabled>
+          <button class="use-button" onclick="move()">View</button>
+        </div>
+        <br>
+        <div id="input-container">
+          <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
+            value="**** **** **** 1578" disabled>
+          <button class="use-button" onclick="move()">View</button>
+        </div>
+        <br>
+        <div>
+          <input type="radio" id="add-new" name="card-option">
+          <label for="add-new">Add Existing Card</label><br><br>
+        </div>
+        <div>
+          <input type="radio" id="no-card" name="card-option">
+          <label for="no-card">Apply for a New Card</label><br><br>
+        </div>
+        <div id="toast">
+          <div id="img">
+            <div class="ro" style='font-size:30px; '>&#9989;</div>
+          </div>
+          <div id="desc">Your application has been received</div>
+        </div>
+      <div id="card-details" class="hidden">
+        <h3>Add Card Details</h3>
+        <form onsubmit="move();return false;" id="card-form">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" required>
+
+          <label for="card-holder">Card Holder Name:</label>
+          <input type="text" id="card-holder" required>
+
+          <label for="expiry-date">Expiry Date:</label>
+          <input style="margin-right:20px" type="text" id="expiry-date" required>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <button id="apply-new" class="hidden" onclick="launch_toast()">
+        <p>Apply for a New Card</p>
+      </button>
+
+    </div>
+  </main>
+  <footer>
+    <p className="cp-text">© Copyright 2023 Prosperity Bank. All rights reserved.</p>
+    <a href="report.html" target="_blank">
+      <p>Report an issue</p>
+    </a>
+  </footer>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ button {
     color: var(theme);
     font-size: 18px;
     border-color: transparent;
-    padding: 10px 40px;
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -54,8 +54,7 @@ nav li {
     margin: 0 10px;
 }
 
-nav a,
-nav a:visited {
+nav a {
     color: var(--theme);
     text-decoration: none;
     font-size: 18px;
@@ -139,7 +138,7 @@ textarea {
     height: 80px;
 }
 
-form {
+.change {
     width: 95%;
     margin: 10px 50px 50px 10px;
     border-radius: 5px;
@@ -176,12 +175,6 @@ form button[type="submit"] {
     text-decoration: none;
 }
 
-.active {
-    color: #fff;
-}
-
-
-
 hr {
     border: 2px solid var(--yellow);
     margin-bottom: 40px;
@@ -201,4 +194,16 @@ hr {
 
 .outgoing {
     color: #951616;
+}
+
+.buttons {
+    display: flex;
+}
+
+button[type="submit"] .cancel {
+    background-color: var(--danger);
+}
+    
+.active {
+    color: #fff;
 }
