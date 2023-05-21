@@ -19,16 +19,23 @@
 		<h1>Report a Technical Issue</h1>
 		<form>
             <label for="name">Name</label>
-			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+			<input type="text" id="name" name="name" placeholder="Enter your name">
             <label for="email">Email</label>
-			<input type="email" id="email" name="email" placeholder="Enter your email" required>
+			<input type="email" id="email" name="email" placeholder="Enter your email" >
 			<label for="message">Message</label>
-            <textarea id="'message" placeholder="Tell us your problem" required></textarea>
-			<button id="submit-btn" type="submit">Submit</button>
+            <textarea id="'message" placeholder="Tell us your problem"></textarea>
+            <div class="buttons">
+                <button id="submit-btn" type="submit">Submit</button>
+                <button id="cancel-btn" class="cancel" type="submit">Cancel</button>
+            </div>
 		</form>
         <script>
             const submitBtn = document.getElementById('submit-btn');
             submitBtn.addEventListener('click', () => {
+              window.close();
+            });
+            const cancelBtn = document.getElementById('cancel-btn');
+            cancelBtn.addEventListener('click', () => {
               window.close();
             });
           </script>

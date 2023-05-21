@@ -1,129 +1,136 @@
 /* Components */
-button {
-  background-color: var(--yellow);
-  color: var(theme);
-  font-size: 18px;
-  border-color: transparent;
-  padding: 10px 40px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+button {background-color: var(--yellow);
+    color: var(theme);
+    font-size: 18px;
+    border-color: transparent;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 a {
-  text-decoration: none;
+text-decoration: none;
 }
 
 button:hover {
-  transform: scale(1.1);
+transform: scale(1.1);
 }
 
 button:active {
-  transform: scale(1);
+transform: scale(1);
 }
 
 button a {
-  text-decoration: none;
+text-decoration: none;
 }
 
 button a:active {
-  color: var(--theme);
+color: var(--theme);
 }
 
 #billsPayment {
-  width: 95%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 10px;
-  font-size: 18px;
-  color: var(--theme);
+width: 95%;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 20px;
+margin-top: 20px;
+margin-left: 10px;
+font-size: 18px;
+color: var(--theme);
 }
 
 .nav_items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+display: flex;
+flex-direction: row;
+align-items: center;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
 }
 
 nav li {
-  margin: 0 10px;
+margin: 0 10px;
+}
+
+nav a {
+color: var(--theme);
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+padding: 10px;
 }
 
 nav a,
 nav a:visited {
-  color: var(--theme);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
+    color: var(--theme);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 #bell-icon {
-  /* padding-top: 10px; */
-  height: 30px;
-  width: 30px;
+    /* padding-top: 10px; */
+    height: 30px;
+    width: 30px;
 }
 
 #bell-icon:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 #bell-icon:active {
-  transform: scale(1);
+    transform: scale(1);
 }
 
 nav a:active {
-  color: #fff;
+    color: #fff;
 }
 
 nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 2px;
-  color: val(--theme);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    color: val(--theme);
 }
 
 main {
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* max-width: 400px; */
-  width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* max-width: 400px; */
+    width: 80%;
 }
 
 .login-container {
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--theme);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--theme);
 }
 
 form label {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--theme);
+    display: block;
+    margin-bottom: 10px;
+    color: var(--theme);
 }
 
 form input[type="text"],
@@ -131,77 +138,89 @@ form input[type="password"],
 form input[type="number"],
 form input[type="email"],
 textarea {
-  display: block;
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 textarea {
-  height: 80px;
+    height: 80px;
 }
 
 form {
-  width: 95%;
-  margin: 10px 50px 50px 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 10px;
+    width: 95%;
+    margin: 10px 50px 50px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
 .forms {
-  display: flex;
+    display: flex;
 }
 
 form h3 {
-  text-align: center;
+    text-align: center;
 }
 
 form button[type="submit"] {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: var(--theme);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: var(--theme);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .forgot-password {
-  margin-top: 20px;
-  text-align: center;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .forgot-password a {
-  color: var(--theme);
-  text-decoration: none;
+    color: var(--theme);
+    text-decoration: none;
 }
 
 .active {
-  color: #fff;
+    color: #fff;
 }
 
 hr {
-  border: 2px solid var(--yellow);
-  margin-bottom: 40px;
-  margin-top: 40px;
-  width: 80%;
+    border: 2px solid var(--yellow);
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 80%;
 }
 
 .transaction {
-  display: flex;
-  padding: 5px 20px;
-  justify-content: space-around;
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-around;
 }
 
 .incoming {
-  color: #139213;
+    color: #139213;
 }
 
 .outgoing {
-  color: #951616;
+    color: #951616;
+}
+
+.buttons {
+    display: flex;
+}
+
+button[type="submit"] .cancel {
+    background-color: var(--danger);
+}
+
+.active {
+    color: #fff;
 }
