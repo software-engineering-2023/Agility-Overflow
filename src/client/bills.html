@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Bills Page</title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../styles/general.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/client.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <a href="dashboard.html"
+          ><img
+            src="../assets/logo.png"
+            alt="logo"
+            class="logo"
+            height="125px"
+            width="125px"
+        /></a>
+      </div>
+      <div class="nav_items">
+        <ul>
+          <li>
+            <a href="notifications.html"
+              ><img id="bell-icon" src="../assets/bell.png"
+            /></a>
+          </li>
+          <li><a href="bank-accounts.html">Bank Accounts</a></li>
+          <li><a href="loans.html">Loans</a></li>
+          <li class="active"><a href="bills.html">Bills</a></li>
+          <li><a href="transfer.html">Transfer</a></li>
+          <li><a href="credit-cards.html">Credit Cards</a></li>
+        </ul>
+        <div>
+          <a href="login.html"><button>Log out</button></a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <h1>Bills</h1>
+
+      <label for="billsPayment">Choose bill to pay for: </label>
+      <select id="billsPayment" name="billsPayment">
+        <option value="CardBills">Card Bills</option>
+        <option value="GasBills">Gas Bills</option>
+        <option value="WaterBills">Water Bills</option>
+        <option value="ElectricityBills">Electricity Bills</option>
+        <option value="TelephoneBills">Telephone Bills</option>
+      </select>
+
+      <form>
+        <label for="cardBills">Amount</label>
+        <input
+          type="number"
+          id="billPaymentAmount"
+          name="cardBills"
+          step="0.01"
+          min="0"
+        />
+
+        <button type="submit">Pay</button>
+      </form>
+    </main>
+    <footer>
+      <p class="cp-text">© 2023 Prosperity Bank. All rights reserved.</p>
+      <a href="report.html" target="_blank">
+        <p>Report an issue</p>
+      </a>
+    </footer>
+  </body>
+</html>
