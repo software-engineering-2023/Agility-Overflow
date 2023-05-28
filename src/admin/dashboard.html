@@ -31,12 +31,40 @@
 			<p>Loans approved previous month: 342</p>
 			<p>Loans declined previous month: 12</p>
             <br />
-            <form action="dashboard.html">
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="message"></p>
+                </div>
+            </div>
+            <form id="myForm">
                 <label for="announcement">Send Announcement to Users</label>
                 <textarea id="announcement" placeholder="Type your announcement"></textarea>
-                <button type="submit">Send</button>
+                <button id="myBtn" type="submit">Send</button>
             </form>
         </main>
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            document.getElementById("myForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            document.getElementById("message").innerHTML = "Your announcement has been sent successfully";
+            modal.style.display = "block";
+            });
+        </script>
 	</div>
 </body>
 </html>

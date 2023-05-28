@@ -69,13 +69,43 @@
                         <option value="value2">Personal</option>
                       </select>
                 </div>
+                <article id="confirmModal" class="modal">
+                    <div class="modal-content">
+                      <h3>Are you sure you want to revoke this loan?</h3>
+                      <div class="modal-buttons">
+                        <button id="confirmBtn" type="button">Yes</button>
+                        <button id="cancelBtn" type="button">Cancel</button>
+                      </div>
+                    </div>
+                </article>
                 <br />
                 <br />
                 <div>
-                    <button type="submit" class="remove">Revoke Loan</button>
+                    <button id="removeBtn" type="button" class="remove">Revoke Loan</button>
                     <button type="submit">Update Info</button>
                 </div>
             </form>
+            <script>
+                var removeBtn = document.getElementById("removeBtn");
+                var confirmModal = document.getElementById("confirmModal");
+                var confirmBtn = document.getElementById("confirmBtn");
+                var cancelBtn = document.getElementById("cancelBtn");
+                removeBtn.onclick = function() {
+                  confirmModal.style.display = "block";
+                }
+                confirmBtn.onclick = function() {
+                  confirmModal.style.display = "none";
+                  window.location.href = "loans.html";
+                }
+                cancelBtn.onclick = function() {
+                  confirmModal.style.display = "none";
+                }
+                window.onclick = function(event) {
+                  if (event.target == confirmModal) {
+                    confirmModal.style.display = "none";
+                  }
+                }
+                </script>
         </main>
 	</div>
 </body>

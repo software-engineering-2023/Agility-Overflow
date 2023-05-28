@@ -53,7 +53,7 @@
                 <br />
                 <br />
                 <div>
-                    <button type="submit" class="remove">Remove Account</button>
+                    <button id="removeBtn" type="button" class="remove">Remove Account</button>
                     <button type="submit">Update Info</button>
                 </div>
                 <hr />
@@ -88,9 +88,38 @@
                     <span>Gas Bill</span>
                     <span>20.04.2023</span>
                 </div>
-                
+                <article id="confirmModal" class="modal">
+                    <div class="modal-content">
+                      <h3>Are you sure you want to remove this bank account?</h3>
+                      <div class="modal-buttons">
+                        <button id="confirmBtn" type="button">Yes</button>
+                        <button id="cancelBtn" type="button">Cancel</button>
+                      </div>
+                    </div>
+                </article>
             </form>
         </main>
+        <script>
+            var removeBtn = document.getElementById("removeBtn");
+            var confirmModal = document.getElementById("confirmModal");
+            var confirmBtn = document.getElementById("confirmBtn");
+            var cancelBtn = document.getElementById("cancelBtn");
+            removeBtn.onclick = function() {
+              confirmModal.style.display = "block";
+            }
+            confirmBtn.onclick = function() {
+              confirmModal.style.display = "none";
+              window.location.href = "bank-accounts.html";
+            }
+            cancelBtn.onclick = function() {
+              confirmModal.style.display = "none";
+            }
+            window.onclick = function(event) {
+              if (event.target == confirmModal) {
+                confirmModal.style.display = "none";
+              }
+            }
+            </script>
 	</div>
 </body>
 </html>
