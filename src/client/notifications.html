@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        TODO: write your title here
+    </title>
+    <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../styles/general.css">
+    <link rel="stylesheet" type="text/css" href="../styles/client.css">
+    <link rel="stylesheet" type="text/css" href="../styles/clientNotifications.css">
+
+    
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="dashboard.html"><img src="../assets/logo.png" alt="logo" className="logo" height="125px" width="125px"></img></a>
+        </div>
+        <div class="nav_items">
+            <ul>
+                <!-- TODO: write class="active" in the <a> element corresponding to your page -->
+                <li><a href="notifications.html"><img id="bell-icon" src="../assets/bell.png"></a></li>
+                <li><a href="bank-accounts.html">Bank Accounts</a></li>
+                <li><a href="loans.html">Loans</a></li>
+                <li><a href="bills.html">Bills</a></li>
+                <li><a href="transfer.html">Transfer</a></li>
+                <li><a href="credit-cards.html">Credit Cards</a></li>
+            </ul>
+            <div>
+                <a href="login.html"><button>Log out</button></a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <table class="notifications-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Notification</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-05-27</td>
+                <td>Payment received</td>
+                <td>Read</td>
+              </tr>
+              <tr>
+                <td>2023-05-26</td>
+                <td>Transaction declined</td>
+                <td>Unread</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+
+
+          <table class="issues-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Issue</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-05-25</td>
+                <td>Account balance discrepancy</td>
+                <td>Resolved</td>
+              </tr>
+              <tr>
+                <td>2023-05-24</td>
+                <td>Unable to log in</td>
+                <td>Unresolved</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+                  
+          
+
+          <table class="announcements-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Announcement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-05-23</td>
+                <td>New service fees</td>
+              </tr>
+              <tr>
+                <td>2023-05-22</td>
+                <td>System maintenance schedule</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+
+
+
+          <table class="overdue-bills-table">
+  <thead>
+    <tr>
+      <th>Bill ID</th>
+      <th>Due Date</th>
+      <th>Amount</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="clickable-row">
+      <td><a href="bills.html">001</a></td>
+      <td><a href="bills.html">2023-05-15</a></td>
+      <td><a href="bills.html">$200</a></td>
+      <td><a href="bills.html">Overdue</a></td>
+    </tr>
+    <tr class="clickable-row">
+      <td><a href="bills.html">002</a></td>
+      <td><a href="bills.html">2023-05-20</a></td>
+      <td><a href="bills.html">$150</a></td>
+      <td><a href="bills.html">Overdue</a></td>
+    </tr>
+    <tr class="clickable-row">
+      <td><a href="bills.html">003</a></td>
+      <td><a href="bills.html">2023-05-10</a></td>
+      <td><a href="bills.html">$100</a></td>
+      <td><a href="bills.html">Overdue</a></td>
+    </tr>
+    <tr class="clickable-row">
+      <td><a href="bills.html">004</a></td>
+      <td><a href="bills.html">2023-05-25</a></td>
+      <td><a href="bills.html">$300</a></td>
+      <td><a href="bills.html">Overdue</a></td>
+    </tr>
+  </tbody>
+</table>
+
+          
+    </main>
+    <footer>
+        <p className="cp-text" >© Copyright 2023 Prosperity Bank. All rights reserved.</p>
+        <a href="report.html" target="_blank">
+            <p>Report an issue</p>
+        </a>
+    </footer>
+</body>
+</html>
