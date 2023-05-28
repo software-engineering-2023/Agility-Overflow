@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Transactions</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(45deg, #49a09d, #5f2c82);
+      font-family: sans-serif;
+      font-weight: 200;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    table {
+      width: 800px;
+      border-collapse: collapse;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    th {
+      text-align: left;
+      background-color: #55608f;
+    }
+
+    tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    td {
+      position: relative;
+    }
+
+    td:hover:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -9999px;
+      bottom: -9999px;
+      background-color: rgba(255, 255, 255, 0.139);
+      z-index: -1;
+    }
+
+    .top-right-button {
+      position: absolute;
+      top: 25px;
+      /* Adjust this value to position the button vertically */
+      left: 25px;
+      /* Adjust this value to position the button horizontally */
+      padding: 10px 20px;
+      background-color: #43056c66;
+      color: white;
+      border: #43056c;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    a:link,
+    a:visited {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    a:link:active,
+    a:visited:active {
+      color: whitesmoke;
+    }
+
+    a:hover {
+      font-size: 1.3rem;
+      font-weight: 880;
+      color: bisque;
+    }
+  </style>
+</head>
+
+<body>
+  <button type="button"><a class="top-right-button" href="./2_page.html">Back</a></button>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Account</th>
+          <th>Category</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sep 20,2021</td>
+          <td>Home Depot</td>
+          <td>Total checking</td>
+          <td>Office Supplies</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+
+          <td>Oct 12,2021</td>
+          <td>Internet expenses</td>
+          <td>Total checking</td>
+          <td>Computer-Internet</td>
+          <td>$350</td>
+        </tr>
+        <tr>
+
+          <td>Oct 17,2021</td>
+          <td>Deposit</td>
+          <td>Total checking</td>
+          <td>Salary</td>
+          <td>$900</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
