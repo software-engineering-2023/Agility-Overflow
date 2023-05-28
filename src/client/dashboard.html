@@ -76,7 +76,7 @@
                 <input type="email" id="new-email" name="new-email" placeholder="Enter your new email" required>
                 <label for="confirm-email">Confirm New Email</label>
                 <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm your new email" required>
-                <button type="submit">Change Email</button>
+                <button class="myBtn" type="button">Change Email</button>
               </form>
               
               <form class="change">
@@ -87,9 +87,40 @@
                 <input type="password" id="new-password" name="new-password" placeholder="Enter your new password" required>
                 <label for="confirm-password">Confirm New Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your new password" required>
-                <button type="submit">Change Password</button>
+                <button class="myBtn" type="button">Change Password</button>
               </form>
         </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p id="message">Changes have been saved successfully</p>
+            </div>
+        </div>
+        
+        <script>
+            // Get the modal element
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var closeBtn = modal.querySelector(".close");
+
+// When the user clicks the button, open the modal
+document.querySelector(".myBtn").addEventListener("click", function() {
+    modal.style.display = "block";
+});
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
+        </script>
     </main>
     <footer>
         <p className="cp-text" >© Copyright 2023 Prosperity Bank. All rights reserved.</p>

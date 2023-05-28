@@ -39,18 +39,18 @@
             <div id="input-container">
                 <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
                     value="Bank Account Number 3210987654" disabled>
-                <a href="account-100.html"><button class="use-button">View</button></a>
+                <a href="bank-account-example.html"><button class="use-button">View</button></a>
             </div>
             <br>
             <div id="input-container">
                 <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
                     value="Bank Account Number 8754632190" disabled>
-                <a href="account-101.html"><button class="use-button">View</button></a>
+                <a href="bank-account-example.html"><button class="use-button">View</button></a>
             </div>
             <br>
             <div id="card-details">
                 <h3>Add Bank Account</h3>
-                <form onsubmit="move();return false;" id="card-form">
+                <form id="card-form">
                     <label for="type">Currency</label>
                     <select id="type">
                         <option value="value1">EGP - Egyptian Pound</option>
@@ -66,9 +66,37 @@
                         <input type="checkbox" name="example_checkbox" value="1" required>
                         I agree to the terms and conditions.
                     </label>
-                    <button type="submit">Submit</button>
+                    <button id="submit-btn" type="button">Submit</button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <p id="success-message">Success! You have added a new bank account.</p>
+                        </div>
+                      </div>             
                 </form>
             </div>
+            <script>
+                const submitBtn = document.getElementById("submit-btn");
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close");
+
+submitBtn.addEventListener("click", function() {
+  // Show the modal
+  modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function() {
+  // Hide the modal when the close button is clicked
+  modal.style.display = "none";
+});
+
+// Hide the modal when the user clicks outside of it
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+            </script>
 
             <button id="apply-new" class="hidden" onclick="launch_toast()">
                 <p>Apply for a New Card</p>

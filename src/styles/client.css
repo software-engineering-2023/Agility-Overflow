@@ -640,3 +640,67 @@ label {
     cursor: pointer;
   }
   
+
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked + span {
+    font-weight: bold;
+  }
+  
+  input[type="checkbox"] + span {
+    cursor: pointer;
+  }
+
+  #closeAcc {
+    width: 50%;
+    margin: 20px auto 0;
+    background-color: var(--danger);
+    color: white;
+  }
+
+  .hidden {
+    display:none;
+  }
+
+  #submit-btn {
+    margin: 10px auto;
+  }
+
+  
+#cancelBtn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 20% 0 0;
+  }
+  
+  #cancelBtn:hover {
+    background-color: #999;
+    color: #fff;
+  }
+  
+  #confirmBtn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 20% 0 0;
+
+  }
+  
+  #confirmBtn:hover {
+    background-color: #d32f2f;
+  }

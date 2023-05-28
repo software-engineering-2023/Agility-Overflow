@@ -43,28 +43,50 @@
     <main>
       <h1>Bills</h1>
 
-      <label for="billsPayment">Choose bill to pay for: </label>
+      <label for="billsPayment">Choose bill to pay: </label>
       <select id="billsPayment" name="billsPayment">
-        <option value="CardBills">Card Bills</option>
-        <option value="GasBills">Gas Bills</option>
-        <option value="WaterBills">Water Bills</option>
-        <option value="ElectricityBills">Electricity Bills</option>
-        <option value="TelephoneBills">Telephone Bills</option>
+        <option value="CardBills">Card Bill - due 23/12/2023 - 253 EGP</option>
+        <option value="GasBills">Gas Bill - due 27/11/2023 - 123 EGP</option>
+        <option value="WaterBills">Water Bill - due 12/05/2024 - 1235 EGP</option>
+        <option value="ElectricityBills">Electricity Bill - due 23/03/2024 - 5223 EGP</option>
+        <option value="TelephoneBills">Telephone Bill - due 01/01/2025 - 2000 EGP</option>
       </select>
 
       <form>
-        <label for="cardBills">Amount</label>
-        <input
-          type="number"
-          id="billPaymentAmount"
-          name="cardBills"
-          min="1"
-          max="1000000"
-          required
-        />
-
-        <button type="submit">Pay</button>
+        <button id="applyBtn" type="button">Pay</button>
       </form>
+      <div id="successModal" class="modal">
+        <div class="modal-content">
+          <h2>Success!</h2>
+          <p>Your bill has been payed successfully.</p>
+        </div>
+      </div>
+  
+      <script>
+          // Get the modal
+          var modal = document.getElementById("successModal");
+  
+          // Get the button that opens the modal
+          var applyBtn = document.getElementById("applyBtn");
+  
+          // When the user clicks on the button, open the modal
+          applyBtn.onclick = function() {
+              // Show the modal
+              modal.style.display = "block";
+  
+              // Hide the modal after 3 seconds (3000 milliseconds)
+              setTimeout(function() {
+                  modal.style.display = "none";
+              }, 3000);
+          }
+  
+          // When the user clicks outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+      </script>
     </main>
     <footer>
       <p class="cp-text">© 2023 Prosperity Bank. All rights reserved.</p>

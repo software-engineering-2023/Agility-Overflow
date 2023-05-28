@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        TODO: write your title here
+        Loans
     </title>
     <link rel="icon" href="../assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../styles/general.css">
@@ -18,10 +18,9 @@
         </div>
         <div class="nav_items">
             <ul>
-                <!-- TODO: write class="active" in the <a> element corresponding to your page -->
                 <li><a href="notifications.html"><img id="bell-icon" src="../assets/bell.png"></a></li>
                 <li><a href="bank-accounts.html">Bank Accounts</a></li>
-                <li><a href="loans.html">Loans</a></li>
+                <li><a class="active" href="loans.html">Loans</a></li>
                 <li><a href="bills.html">Bills</a></li>
                 <li><a href="transfer.html">Transfer</a></li>
                 <li><a href="credit-cards.html">Credit Cards</a></li>
@@ -32,11 +31,74 @@
         </div>
     </nav>
     <main>
-        <h2>Applied Loans:</h2>
         
-        <hr>
-        <button> Apply to a new Loan</button>
-        <!-- TODO: Add new Loan -->
+        <h1>My Loans</h1>
+        <div class="container">
+            <div id="input-container">
+                <input type="text" class="autofill-input" id="name-input" name="name" autocomplete="on"
+                    value="Loan Number 4326" disabled>
+                <a href="bank-account-example.html"><button class="use-button">View</button></a>
+            </div>
+            <br>
+            <h2>Apply for a new Loan</h2>
+            <form>
+                <label for="nationalID">National ID:</label>
+                <input type="text" id="nationalID" name="nationalID" required>
+        
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" required>
+        
+                <label for="guarantee">Guarantee for payment:</label>
+                <input type="text" id="guarantee" name="guarantee" required>
+        
+                <label for="loanType">Loan Type:</label>
+                <select id="type">
+                    <option value="value1">Car Loan</option>
+                    <option value="value2">Personal Loan</option>
+                  </select>
+
+                <label for="loanAmount">Loan Amount:</label>
+                <input type="number" id="loanAmount" name="loanAmount" required>
+        
+                <button type="button" id="applyBtn">Apply</button>
+            </form>
+        
+            <!-- The modal -->
+            <div id="successModal" class="modal">
+              <div class="modal-content">
+                <h2>Success!</h2>
+                <p>Your loan has been requested successfully.</p>
+              </div>
+            </div>
+        
+            <script>
+                // Get the modal
+                var modal = document.getElementById("successModal");
+        
+                // Get the button that opens the modal
+                var applyBtn = document.getElementById("applyBtn");
+        
+                // When the user clicks on the button, open the modal
+                applyBtn.onclick = function() {
+                    // Show the modal
+                    modal.style.display = "block";
+        
+                    // Hide the modal after 3 seconds (3000 milliseconds)
+                    setTimeout(function() {
+                        modal.style.display = "none";
+                    }, 3000);
+                }
+        
+                // When the user clicks outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
     </main>
     <footer>
         <p className="cp-text" >© Copyright 2023 Prosperity Bank. All rights reserved.</p>

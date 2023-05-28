@@ -281,3 +281,21 @@ form input:disabled {
     cursor: pointer;
   }
   
+
+  #closeSys {
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: var(--danger);
+    color: white;
+    cursor: pointer;
+  }  #openSys {
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+  } #balabizo {
+    border: none;
+  }

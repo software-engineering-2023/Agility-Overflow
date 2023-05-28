@@ -21,7 +21,6 @@
         </div>
         <div class="nav_items">
             <ul>
-                <!-- TODO: write class="active" in the <a> element corresponding to your page -->
                 <li><a href="notifications.html"><img id="bell-icon" src="../assets/bell.png"></a></li>
                 <li><a href="bank-accounts.html">Bank Accounts</a></li>
                 <li><a href="loans.html">Loans</a></li>
@@ -35,6 +34,27 @@
         </div>
     </nav>
     <main>
+      <h1>Notifications</h1>
+      <label>
+        <input checked type="checkbox" name="electricity" value="1">
+        Opt for electricity bills
+      </label>
+      
+      <label>
+        <input checked type="checkbox" name="telephone" value="1">
+        Opt for telephone bills
+      </label>
+      
+      <label>
+        <input checked type="checkbox" name="water" value="1">
+        Opt for water bills
+      </label>
+      
+      <label>
+        <input checked type="checkbox" name="gas" value="1">
+        Opt for gas bills
+      </label>
+      <br />
         <table class="notifications-table">
             <thead>
               <tr>
@@ -57,8 +77,8 @@
               <!-- Add more rows as needed -->
             </tbody>
           </table>
-
-
+<br />
+<h2>Your Reported Issues</h2>
           <table class="issues-table">
             <thead>
               <tr>
@@ -81,8 +101,8 @@
               <!-- Add more rows as needed -->
             </tbody>
           </table>
-                  
-          
+          <br />
+          <h2>Announcements</h2>
 
           <table class="announcements-table">
             <thead>
@@ -103,7 +123,8 @@
               <!-- Add more rows as needed -->
             </tbody>
           </table>
-
+          <br />
+          <h2>Bills Reminders</h2>
 
 
 <table class="overdue-bills-table">
