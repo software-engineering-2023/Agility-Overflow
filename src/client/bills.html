@@ -43,7 +43,15 @@
     <main>
       <h1>Bills</h1>
 
-      <label for="billsPayment">Choose bill to pay: </label>
+      <label for="bankAccount">Bank Account</label>
+      <select id="bankAccount" name="bankAccount">
+        <option value="account1">Account 1 (#54325)</option>
+        <option value="account2">Account 2 (#61461)</option>
+      </select>
+      <label for="availableBalance">Available Balance</label>
+      <input class="ab" type="text" id="availableBalance" name="availableBalance" value="54,038 EGP" disabled/>
+
+      <label for="billsPayment">Choose a Bill to Pay</label>
       <select id="billsPayment" name="billsPayment">
         <option value="CardBills">Card Bill - due 23/12/2023 - 253 EGP</option>
         <option value="GasBills">Gas Bill - due 27/11/2023 - 123 EGP</option>

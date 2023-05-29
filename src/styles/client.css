@@ -139,7 +139,8 @@ form input[type="number"],
 form input[type="email"],
 form input[type="tel"],
 select,
-textarea {
+textarea,
+.ab {
     display: block;
     padding: 5px;
     width: 100%;

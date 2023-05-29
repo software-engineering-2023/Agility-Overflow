@@ -21,8 +21,10 @@
     <div class="login-container">
 		<h1>Register for a New Account</h1>
 		<form>
-            <label for="name">Name</label>
-			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="name">First Name</label>
+			<input type="text" id="first-name" name="name" placeholder="Enter your first name" required>
+            <label for="name">Last Name</label>
+			<input type="text" id="last-name" name="name" placeholder="Enter your last name" required>
             <label for="email">Email</label>
 			<input type="email" id="email" name="email" placeholder="Enter your email" required>
 			<label for="username">Username</label>
@@ -31,7 +33,7 @@
 			<input type="password" id="password" name="password" placeholder="Enter your password" required>
             <label for="bank-account-number">Bank Account Number (if exists)</label>
 			<input type="number" id="bank-account-number" name="bank-account-number" placeholder="Enter your bank account number if you have one">
-			<button id="applyBtn" type="button">Register</button>
+			<button id="applyBtn" type="submit">Register</button>
 		</form>
 	</div>
     <div id="successModal" class="modal">
@@ -42,22 +44,21 @@
     </div>
 
     <script>
-        // Get the modal
         var modal = document.getElementById("successModal");
-
-        // Get the button that opens the modal
         var applyBtn = document.getElementById("applyBtn");
 
-        // When the user clicks on the button, open the modal
-        applyBtn.onclick = function() {
-            // Show the modal
-            modal.style.display = "block";
+        applyBtn.addEventListener("click", function(event) {
+  const firstName = document.getElementById("first-name").value;
+  const lastName = document.getElementById("last-name").value;
+  const phone = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const nationalId = document.getElementById("password").value;
 
-            // Hide the modal after 3 seconds (3000 milliseconds)
-            setTimeout(function() {
-                modal.style.display = "none";
-            }, 3000);
-        }
+  if (firstName && lastName && phone && email && nationalId) {
+    modal.style.display = "block";
+    event.preventDefault();
+  }
+});
 
         // When the user clicks outside of the modal, close it
         window.onclick = function(event) {

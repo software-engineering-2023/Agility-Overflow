@@ -76,7 +76,7 @@
                 <input type="email" id="new-email" name="new-email" placeholder="Enter your new email" required>
                 <label for="confirm-email">Confirm New Email</label>
                 <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm your new email" required>
-                <button class="myBtn" type="button">Change Email</button>
+                <button id="btn1" type="button">Change Email</button>
               </form>
               
               <form class="change">
@@ -87,7 +87,7 @@
                 <input type="password" id="new-password" name="new-password" placeholder="Enter your new password" required>
                 <label for="confirm-password">Confirm New Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your new password" required>
-                <button class="myBtn" type="button">Change Password</button>
+                <button id="btn2" type="button">Change Password</button>
               </form>
         </div>
         <div id="myModal" class="modal">
@@ -100,12 +100,19 @@
         <script>
             // Get the modal element
 var modal = document.getElementById("myModal");
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+
 
 // Get the <span> element that closes the modal
 var closeBtn = modal.querySelector(".close");
 
 // When the user clicks the button, open the modal
-document.querySelector(".myBtn").addEventListener("click", function() {
+btn1.addEventListener("click", function() {
+    modal.style.display = "block";
+});
+
+btn2.addEventListener("click", function() {
     modal.style.display = "block";
 });
 

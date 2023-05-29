@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Credit Cards
+  </title>
+  <link rel="icon" href="../assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../styles/general.css">
+  <link rel="stylesheet" type="text/css" href="../styles/client.css">
+</head>
+
+<body>
+  <nav>
+    <div>
+      <a href="dashboard.html"><img src="../assets/logo.png" alt="logo" className="logo" height="125px"
+          width="125px"></img></a>
+    </div>
+    <div class="nav_items">
+      <ul>
+        <li><a href="notifications.html"><img id="bell-icon" src="../assets/bell.png"></a></li>
+        <li><a href="bank-accounts.html">Bank Accounts</a></li>
+        <li><a class="active" href="loans.html">Loans</a></li>
+        <li><a href="bills.html">Bills</a></li>
+        <li><a href="transfer.html">Transfer</a></li>
+        <li><a href="credit-cards.html">Credit Cards</a></li>
+      </ul>
+      <div>
+        <a href="login.html"><button>Log out</button></a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h1>View and Manage Your Loan</h1>
+    <!-- Info -->
+    <h2>Loan Information</h2>
+    <p>Loan ID: 19837</p>
+    <p>Status: Approved</p>
+    <p>Type: Car Loan</p>
+    <p>Due Date: 09/12/2023</p>
+    <p>Amount: 30,000 EGP</p>
+    <div class="card-controls">
+        <button id="closeAcc">Revoke Loan</button>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <h2>Confirm Loan Revocation</h2>
+        <p>Are you sure you want to revoke your loan?</p>
+        <div class="modal-buttons">
+          <button id="cancelBtn">Cancel</button>
+          <button id="confirmBtn">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const closeBtn = document.getElementById("closeAcc");
+const modal = document.querySelector(".modal");
+const cancelBtn = document.getElementById("cancelBtn");
+const confirmBtn = document.getElementById("confirmBtn");
+
+closeBtn.addEventListener("click", function() {
+  // Show the modal when the "Close Account" button is clicked
+  modal.style.display = "block";
+});
+
+cancelBtn.addEventListener("click", function() {
+  // Hide the modal when the "Cancel" button is clicked
+  modal.style.display = "none";
+});
+
+confirmBtn.addEventListener("click", function() {
+  // Perform the account closure when the "Confirm" button is clicked
+  // Replace this withthe actual code to close the account
+  window.location.href = "loans.html";
+  modal.style.display = "none";
+});
+
+// Hide the modal when the user clicks outside of it
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+  </script>
+  <footer>
+    <p className="cp-text">© Copyright 2023 Prosperity Bank. All rights reserved.</p>
+    <a href="report.html" target="_blank">
+      <p>Report an issue</p>
+    </a>
+  </footer>
+</body>
+
+</html>
