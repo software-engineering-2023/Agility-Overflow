@@ -49,10 +49,28 @@
             </div>
             <br>
             <div id="card-details">
-                <h3>Add Bank Account</h3>
+                <h3>Open a Bank Account</h3>
                 <form id="card-form">
-                    <label for="type">Currency</label>
-                    <select id="type">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="last-name">Last Name</label>
+                    <input required type="text" id="last-name" name="last-name">
+
+                    <label for="phone-number">Phone Number</label>
+                    <input required type="tel" id="phone-number" name="phone-number">
+
+                    <label for="email">Email Address</label>
+                    <input required type="email" id="email" name="email">
+
+                    <label for="national-id">National ID</label>
+                    <input required type="text" id="national-id" name="national-id">
+
+                    <label for="occupation">Occupation</label>
+                    <input required type="text" id="occupation" name="occupation">
+
+                    <label  for="type">Currency</label>
+                    <select required id="type">
                         <option value="value1">EGP - Egyptian Pound</option>
                         <option value="value2">EUR - Euro</option>
                         <option value="value3">USD - United States Dollar</option>
@@ -66,23 +84,38 @@
                         <input type="checkbox" name="example_checkbox" value="1" required>
                         I agree to the terms and conditions.
                     </label>
-                    <button id="submit-btn" type="button">Submit</button>
-                    <div id="myModal" class="modal">
-                        <div class="modal-content">
-                          <span class="close">&times;</span>
-                          <p id="success-message">Success! You have added a new bank account.</p>
-                        </div>
-                      </div>             
+                    <button id="submit-btn" type="submit">Submit</button>
                 </form>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p id="success-message">Success! You have added a new bank account.</p>
+                    </div>
+                  </div>
             </div>
             <script>
                 const submitBtn = document.getElementById("submit-btn");
 const modal = document.querySelector(".modal");
 const closeBtn = document.querySelector(".close");
 
-submitBtn.addEventListener("click", function() {
-  // Show the modal
-  modal.style.display = "block";
+submitBtn.addEventListener("click", function(event) {
+//   event.preventDefault(); // prevent the form from submitting
+
+  // Check if all required fields are filled
+  const firstName = document.getElementById("first-name").value;
+  const lastName = document.getElementById("last-name").value;
+  const phone = document.getElementById("phone-number").value;
+  const email = document.getElementById("email").value;
+  const nationalId = document.getElementById("national-id").value;
+  const occupation = document.getElementById("occupation").value;
+  const currency = document.getElementById("type").value;
+  const agreeCheckbox = document.querySelector('input[name="example_checkbox"]:checked');
+
+  if (firstName && lastName && phone && email && nationalId && occupation && currency && agreeCheckbox) {
+    // Show the modal if all required fields are filled
+    modal.style.display = "block";
+    event.preventDefault();
+  }
 });
 
 closeBtn.addEventListener("click", function() {

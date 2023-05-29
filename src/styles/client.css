@@ -372,7 +372,7 @@ margin: auto;}
     color: #555;
 }
 
-#card-form input[type="text"] {
+/* #card-form input[type="text"] {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -380,7 +380,7 @@ margin: auto;}
     font-size: 14px;
     background-color: #f9f9f9;
     color: #333;
-}
+} */
 
 #card-form button[type="submit"] {
     display: block;
